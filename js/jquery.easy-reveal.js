@@ -23,6 +23,8 @@ function reveal(){
     var targetTop    = $(this).offset().top;
     var windowScroll = $(window).scrollTop();
     var animation    = $(this).data('easy-reveal');
+    //default animation
+    if (!animation) { animation = 'fade-in-up'; }
 
     // lunch animation if scroll is further the target + offset  OR at the end of the page
     if ( targetTop < ( windowScroll + offsetHeight) || (windowScroll + windowHeight) == docHeight) {
